@@ -18,24 +18,29 @@ class Game:
 
     @staticmethod
     def resolve_winner(user_move: str, bot_move: str):
-        if user_move == 'scissors':
-            if bot_move == 'rock':
+        if user_move == 'S':
+            if bot_move == 'R':
                 return 'bot'
-            elif bot_move == 'paper':
+            elif bot_move == 'P':
                 return 'user'
             else:
                 return 'draw'
-        if user_move == 'paper':
-            if bot_move == 'rock':
+        if user_move == 'P':
+            if bot_move == 'R':
                 return 'user'
-            elif bot_move == 'paper':
+            elif bot_move == 'P':
                 return 'draw'
             else:
                 return 'bot'
-        if user_move == 'rock':
-            if bot_move == 'rock':
+        if user_move == 'R':
+            if bot_move == 'R':
                 return 'draw'
-            elif bot_move == 'paper':
+            elif bot_move == 'P':
                 return 'bot'
             else:
                 return 'user'
+
+    def reset(self):
+        self.round = 0
+        self.user_score = 0
+        self.bot_score = 0
