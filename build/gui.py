@@ -10,8 +10,7 @@ from build.services.game_service import Game
 
 # Define the output path and assets path
 OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\Herman\Desktop\Markov\build\assets\frame0")
-
+ASSETS_PATH = OUTPUT_PATH / Path("assets/frame0")
 # Initialize the bot
 bot = Bot()
 
